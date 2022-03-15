@@ -17,7 +17,7 @@ body {
   background: var(--primary-color);
   color: var(--text-color);
   overflow-x: hidden; /* no scrollbars that go horizontal */
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; -> don't need this anymore, there's footer now */
 }
 
 #main-header {
@@ -193,12 +193,15 @@ color: var(--primary-color);
 
 /* Footer */
 .footer {
+  position: sticky;
+  bottom: 0px;
+  background-color: var(--secondary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  height: 200px;
+  height: 100px;
 }
 
 .footer a {
@@ -207,6 +210,9 @@ color: var(--primary-color);
 
 .footer a:hover {
   color: var(--ternary-color);
+}
+.footer .social {
+  margin-bottom: 10px;
 }
 
 .footer .social > * {
